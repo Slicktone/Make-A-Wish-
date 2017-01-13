@@ -1,0 +1,18 @@
+<h1>Wishes!</h1>
+
+<h3>Make a Wish Fool!</h3>
+
+<ul>
+  {{#each wishes}}
+  	<li>
+  	   <p>ID: {{this.id}}</p>
+       <p>Event: {{this.wish}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+<form action="/create" method="POST">
+	<textarea type="text" name="wish"></textarea>
+
+	<button type="submit">Submit</button>
+</form>
